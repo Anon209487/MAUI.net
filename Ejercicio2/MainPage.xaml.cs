@@ -1,4 +1,4 @@
-﻿namespace Ejercicio
+﻿namespace Ejercicio2
 {
     public partial class MainPage : ContentPage
     {
@@ -8,7 +8,6 @@
         {
             InitializeComponent();
         }
-
 
     }
 

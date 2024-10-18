@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio3.MainPage">
+
+    <Border Stroke="Black" BackgroundColor="LightGrey" StrokeThickness="4">
+        <VerticalStackLayout>
+          
+        <HorizontalStackLayout
+            Spacing="0">
+        
+            <AbsoluteLayout>
+                <BoxView Color="RED" MinimumHeightRequest="100" MinimumWidthRequest="100"></BoxView>
+            </AbsoluteLayout>
+            <AbsoluteLayout>
+                <BoxView Color="Blue" MinimumHeightRequest="100" MinimumWidthRequest="200"></BoxView>
+            </AbsoluteLayout>
+        </HorizontalStackLayout>
+        <AbsoluteLayout>
+            <BoxView Color="Green" MinimumHeightRequest="100" MinimumWidthRequest="300"></BoxView>
+        </AbsoluteLayout>
+        <AbsoluteLayout HorizontalOptions="End">
+
+            <BoxView  Color="Yellow" MinimumHeightRequest="130" MinimumWidthRequest="300"></BoxView>
+        </AbsoluteLayout>
+        
+    </VerticalStackLayout>
+    </Border>
+
+</ContentPage>
