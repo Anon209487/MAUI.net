@@ -1,49 +1,56 @@
-﻿<!-- MainPage.xaml -->
+﻿
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio5UI.MainPage"
              Title="Listado de Personas">
     <ContentPage.Content>
-        <Grid>
+        <Grid BackgroundColor="White">
             <ListView x:Name="listViewPersonas"
                       ItemsSource="{Binding Personas}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="10">
-                                <Label Text="{Binding Nombre}" FontSize="Medium" />
-                                <Label Text="{Binding Apellidos}" FontSize="Medium" />
-                                <Label Text="{Binding Edad}" FontSize="Medium" />
+                            <StackLayout Orientation="Horizontal" Padding="10" >
+                                <Label Text="{Binding Nombre}" FontSize="Medium"  TextColor="Black" />
+                                <Label Text="{Binding Apellidos}" FontSize="Medium" TextColor="Black"  />
+                                <Label Text="{Binding Edad}" FontSize="Medium" TextColor="Black" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <!-- Botón Flotante para Añadir Nueva Persona -->
-            <Button Text="+" 
-                    BackgroundColor="Blue"
-                    TextColor="White"
+   
+            <Button Text="new" 
+                    BackgroundColor="LightBlue"
+                    TextColor="Black"
                     CornerRadius="30"
-                    HeightRequest="60"
-                    WidthRequest="60"
+                    HeightRequest="70"
+                    WidthRequest="70"
                     VerticalOptions="End"
                     HorizontalOptions="End"
                     Margin="20"
+                    ImageSource="add.png"
                     Clicked="OnNuevoClicked"/>
 
-            <!-- StackLayout para los Botones Editar y Eliminar -->
+     
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="Center"
                          VerticalOptions="End"
                          Margin="10">
                 <Button Text="Editar"
                         ImageSource="lapiz.png"
-                        BackgroundColor="Transparent"
+                        HeightRequest="70"
+                        WidthRequest="70"
+                        BackgroundColor="LightGreen"
+                        CornerRadius="30"
                         TextColor="Black"/>
                 <Button Text="Eliminar"
-                        ImageSource="papelera.png"
-                        BackgroundColor="Transparent"
+                        ImageSource="delete.png"
+                        HeightRequest="70"
+                        WidthRequest="70"
+                        BackgroundColor="PaleVioletRed"
+                        CornerRadius="30"
                         TextColor="Black"/>
             </StackLayout>
         </Grid>

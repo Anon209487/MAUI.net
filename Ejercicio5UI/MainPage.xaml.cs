@@ -10,8 +10,6 @@ namespace Ejercicio5UI
             public MainPage()
             {
                 InitializeComponent();
-
-                // Crear y rellenar la lista de personas directamente
                 Personas = new ObservableCollection<clsPersona>
             {
                 new clsPersona(1, "Juan", "Pérez", 30),
@@ -26,13 +24,12 @@ namespace Ejercicio5UI
                 new clsPersona(10, "Lucía", "Ramírez", 26)
             };
 
-                // Asignar el contexto de datos para el Binding
                 BindingContext = this;
             }
 
             private void OnNuevoClicked(object sender, EventArgs e)
             {
-                // Acción para el botón de nuevo (sin funcionalidad aún)
+               
             }
         }
     }
