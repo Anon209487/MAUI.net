@@ -1,58 +1,81 @@
-﻿
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio5UI.MainPage"
              Title="Listado de Personas">
     <ContentPage.Content>
+
         <Grid BackgroundColor="White">
+            <!-- Nombra a la lista y como como recurso enlazando la lista persona  -->
             <ListView x:Name="listViewPersonas"
                       ItemsSource="{Binding Personas}">
+
                 <ListView.ItemTemplate>
+
                     <DataTemplate>
+
                         <ViewCell>
+
                             <StackLayout Orientation="Horizontal" Padding="10" >
+                                <!-- Muestra el nombre de la persona   -->
                                 <Label Text="{Binding Nombre}" FontSize="Medium"  TextColor="Black" />
+                                <!-- Muestra el Apellidos de la persona   -->
                                 <Label Text="{Binding Apellidos}" FontSize="Medium" TextColor="Black"  />
+                                <!-- Muestra el Edad de la persona   -->
                                 <Label Text="{Binding Edad}" FontSize="Medium" TextColor="Black" />
+
                             </StackLayout>
+
                         </ViewCell>
+
                     </DataTemplate>
+
                 </ListView.ItemTemplate>
+
             </ListView>
 
-   
+            <!-- Boton para agregar no tiene funcionalidad llama a la clase  OnNuevoClicked en el main y tiene comio soruce la imagen de suma   -->
             <Button Text="new" 
                     BackgroundColor="LightBlue"
                     TextColor="Black"
                     CornerRadius="30"
                     HeightRequest="70"
                     WidthRequest="70"
-                    VerticalOptions="End"
+                     VerticalOptions="End"
                     HorizontalOptions="End"
                     Margin="20"
                     ImageSource="add.png"
-                    Clicked="OnNuevoClicked"/>
+                    Clicked="OnNuevoClickedNew"/>
 
-     
+            <!-- Columna anclada abajo centro que almacena dos botones   no hace nada  -->
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="Center"
                          VerticalOptions="End"
                          Margin="10">
+                <!--boton editar llama a la funcion OnNuevoClickedEdit  no hace nada -->
                 <Button Text="Editar"
                         ImageSource="lapiz.png"
-                        HeightRequest="70"
+                         HeightRequest="70"
                         WidthRequest="70"
                         BackgroundColor="LightGreen"
                         CornerRadius="30"
-                        TextColor="Black"/>
+                        TextColor="Black"
+                          Clicked="OnNuevoClickedEdit"/>
+                <!--boton Eliminar llama a la funcion OnNuevoClickedDelete  no hace nada   -->
                 <Button Text="Eliminar"
                         ImageSource="delete.png"
                         HeightRequest="70"
                         WidthRequest="70"
                         BackgroundColor="PaleVioletRed"
                         CornerRadius="30"
-                        TextColor="Black"/>
+                        TextColor="Black"
+                    Clicked="OnNuevoClickedDelete"/>
+
+
+
             </StackLayout>
+
         </Grid>
+        
     </ContentPage.Content>
+    
 </ContentPage>

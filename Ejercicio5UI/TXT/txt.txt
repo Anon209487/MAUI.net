@@ -1,0 +1,25 @@
+DAL
+-----------------------------------------------------------------------------------------------
+	  public static  ListaPersonas
+	     public static <ClsPersona> ObtenerPersonas() : RES Listaperosnas<ClsPersona>
+
+
+
+
+ENT
+-----------------------------------------------------------------------------------------------
+	     public static ClsPersona
+		        + int Id { get; set; }
+				+  string Nombre { get; set; }
+				+  string Apellidos { get; set; }
+				+  int Edad { get; set; }   
+		    constructor (int Id, string Nombre, string Apellidos, int Edad)
+
+
+UI
+-----------------------------------------------------------------------------------------------
+LOS METODOS EN PRIVADO POR QUE SOLO SE ACCEDEN DESDE EL MAIN 
+          main()
+       -  OnNuevoClickedNew(object sender, EventArgs e)
+       -  OnNuevoClickedDelete(object sender, EventArgs e)
+	   -  OnNuevoClickedEdit(object sender, EventArgs e)

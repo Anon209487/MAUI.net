@@ -56,14 +56,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="UI\**" />
+	  <Compile Remove="UI\**" />
+	  <EmbeddedResource Remove="UI\**" />
+	  <MauiCss Remove="UI\**" />
+	  <MauiXaml Remove="UI\**" />
+	  <None Remove="UI\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Resources\Images\" />
-	  <Folder Include="UI\" />
+	  <Folder Include="TXT\" />
 	</ItemGroup>
 
 </Project>
