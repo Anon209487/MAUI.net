@@ -2,10 +2,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio5UI.MainPage"
              Title="Listado de Personas">
+    
     <ContentPage.Content>
 
-        <Grid BackgroundColor="White">
+        <Grid>
             <!-- Nombra a la lista y como como recurso enlazando la lista persona  -->
+        <ScrollView>
             <ListView x:Name="listViewPersonas"
                       ItemsSource="{Binding Personas}">
 
@@ -32,8 +34,8 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-
-            <!-- Boton para agregar no tiene funcionalidad llama a la clase  OnNuevoClicked en el main y tiene comio soruce la imagen de suma   -->
+            </ScrollView>
+                <!-- Boton para agregar no tiene funcionalidad llama a la clase  OnNuevoClicked en el main y tiene comio soruce la imagen de suma   -->
             <Button Text="new" 
                     BackgroundColor="LightBlue"
                     TextColor="Black"
@@ -73,9 +75,7 @@
 
 
             </StackLayout>
-
         </Grid>
-        
     </ContentPage.Content>
     
 </ContentPage>
