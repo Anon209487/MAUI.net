@@ -12,7 +12,7 @@ namespace Ejercicio5UI.Entidades
     /// </summary>
     public class ClsPersona
     {
-        public int Id { get; set; }
+        public int Id { get;  }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public int Edad { get; set; }

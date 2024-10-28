@@ -5,6 +5,7 @@
 
     <Border Stroke="Aqua" BackgroundColor="LightGrey" StrokeThickness="4" StrokeShape="RoundRectangle 40 , 40,0,0">
         <VerticalStackLayout
+            VerticalOptions="Center"
             Padding="30,0"
             Spacing="25">
 
@@ -14,35 +15,36 @@
               HorizontalOptions="Center"
               BackgroundColor="AliceBlue"
               BorderColor="Black"
-              BorderWidth="2" MaximumWidthRequest="1000" />
+              BorderWidth="2" MinimumWidthRequest="240" />
 
             <Button
               x:Name="Boton2"
               Text="Click me" 
               HorizontalOptions="Center"
-              BackgroundColor="AliceBlue" MaximumWidthRequest="1000" />
+              BackgroundColor="AliceBlue" MinimumWidthRequest="240" />
 
             <Button
               x:Name="Boton3"
               Text="Click me" 
               HorizontalOptions="Center"
-              BackgroundColor="AliceBlue" MaximumWidthRequest="1000"/>
+              BackgroundColor="AliceBlue" MinimumWidthRequest="240"/>
 
             <HorizontalStackLayout
                 Spacing="10"
                 HorizontalOptions="CenterAndExpand"
-                WidthRequest="300">
+                MinimumWidthRequest="30">
 
                 <Label  
                     Text="Introduce nombre" 
                     TextColor="Black"
-                    HorizontalOptions="FillAndExpand" />
+                    HorizontalOptions="FillAndExpand"
+                    MinimumWidthRequest="120"/>
 
                 <Entry  
                     x:Name="nombre"     
                     HorizontalOptions="FillAndExpand"  
                     BackgroundColor="AliceBlue" 
-                    TextColor="Black" MinimumWidthRequest="500"/>
+                    TextColor="Black" MinimumWidthRequest="120"/>
 
             </HorizontalStackLayout>
 
